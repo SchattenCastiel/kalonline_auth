@@ -67,7 +67,7 @@
         "database:validate:mapping": "php bin/console doctrine:schema:validate --skip-sync",
         "database:validate:database": "php bin/console doctrine:schema:validate --skip-mapping",
         "database:validate:all": "php bin/console doctrine:schema:validate",
-        "test:behaviour:run": "vendor/bin/behat --config=config/dev/behat.yml"
+        "test:behaviour:run": "vendor/bin/behat --config=behat.yml"
     },
     "conflict": {
         "symfony/symfony": "*"
@@ -87,7 +87,7 @@
         "friendsofphp/php-cs-fixer": "^3.61",
         "phpmd/phpmd": "^2.15",
         "phpstan/phpstan": "^1.11",
-        "phpunit/phpunit": "^3.7",
+        "phpunit/phpunit": "*",
         "symfony/browser-kit": "7.1.*",
         "symfony/css-selector": "7.1.*",
         "symfony/maker-bundle": "*",

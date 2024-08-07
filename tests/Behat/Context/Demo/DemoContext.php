@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Tests\Behat;
+namespace App\Tests\Behat\Context\Demo;
 
 use Behat\Behat\Context\Context;
 use RuntimeException;

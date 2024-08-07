@@ -1,8 +1,14 @@
 default:
     suites:
-        default:
-            context:
-                class: App\Tests\Behat
+        demo:
+            paths: [ tests/Behat/Feature/Demo/demo.feature ]
+            contexts:
+                - App\Tests\Behat\Context\Demo\DemoContext
+                - App\Tests\Behat\Context\Infrastructure\Login\PasswordEncoderContext
+        PasswordEncoder:
+            paths: [ tests/Behat/Feature/Infrastructure/Login/password_encoder.feature ]
+            contexts:
+                - App\Tests\Behat\Context\Infrastructure\Login\PasswordEncoderContext
 
     extensions:
         FriendsOfBehat\SymfonyExtension:
