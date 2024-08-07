@@ -1,10 +1,9 @@
 default:
     suites:
         demo:
-            paths: [ tests/Behat/Feature/Demo/demo.feature ]
+            paths: [ tests/Behat/Feature/Swagger/swagger.feature ]
             contexts:
-                - App\Tests\Behat\Context\Demo\DemoContext
-                - App\Tests\Behat\Context\Infrastructure\Login\PasswordEncoderContext
+                - App\Tests\Behat\Context\Swagger\SwaggerContext
         PasswordEncoder:
             paths: [ tests/Behat/Feature/Infrastructure/Login/password_encoder.feature ]
             contexts:

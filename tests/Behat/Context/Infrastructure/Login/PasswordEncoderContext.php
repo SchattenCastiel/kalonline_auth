@@ -20,7 +20,7 @@ class PasswordEncoderContext extends TestCase implements Context
 
     public function __construct()
     {
-        parent::__construct('Password Encoder Test');
+        parent::__construct(__CLASS__);
     }
 
     #[BeforeScenario]
