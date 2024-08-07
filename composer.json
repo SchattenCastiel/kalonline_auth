@@ -67,7 +67,7 @@
         "database:validate:mapping": "php bin/console doctrine:schema:validate --skip-sync",
         "database:validate:database": "php bin/console doctrine:schema:validate --skip-mapping",
         "database:validate:all": "php bin/console doctrine:schema:validate",
-        "test:behaviour:run": "vendor/bin/behat --config=behat.yml"
+        "test:behaviour:run": "vendor/bin/behat --config=config/dev/behat.yml"
     },
     "conflict": {
         "symfony/symfony": "*"

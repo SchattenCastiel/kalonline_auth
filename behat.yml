@@ -1,8 +1,8 @@
 default:
     suites:
         default:
-            contexts:
-                - App\Tests\Behat\DemoContext
+            context:
+                class: App\Tests\Behat
 
     extensions:
         FriendsOfBehat\SymfonyExtension:
