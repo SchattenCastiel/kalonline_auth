@@ -1,0 +1,9 @@
+nelmio_api_doc:
+    documentation:
+        info:
+            title: KalOnline Authentication Api
+            description: This should be an microservice for the KalOnline auth database
+            version: 1.0.0
+    areas:
+        path_patterns:
+            - ^/api(?!/doc$) # Accepts routes under /api except /api/doc

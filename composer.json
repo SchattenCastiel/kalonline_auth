@@ -1,0 +1,97 @@
+{
+    "name": "kalonline/auth",
+    "type": "project",
+    "license": "MIT",
+    "description": "KalOnline Authentication Api",
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "require": {
+        "php": ">=8.2",
+        "ext-ctype": "*",
+        "ext-iconv": "*",
+        "doctrine/dbal": "^3",
+        "doctrine/doctrine-bundle": "^2.12",
+        "doctrine/doctrine-migrations-bundle": "^3.3",
+        "doctrine/orm": "^3.2",
+        "nelmio/api-doc-bundle": "^4.29",
+        "symfony/console": "7.1.*",
+        "symfony/dotenv": "7.1.*",
+        "symfony/flex": "^2",
+        "symfony/framework-bundle": "7.1.*",
+        "symfony/runtime": "7.1.*",
+        "symfony/security-bundle": "7.1.*",
+        "symfony/yaml": "7.1.*",
+        "ext-gd": "*"
+    },
+    "config": {
+        "allow-plugins": {
+            "php-http/discovery": true,
+            "symfony/flex": true,
+            "symfony/runtime": true
+        },
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "App\\Tests\\": "tests/"
+        }
+    },
+    "replace": {
+        "symfony/polyfill-ctype": "*",
+        "symfony/polyfill-iconv": "*",
+        "symfony/polyfill-php72": "*",
+        "symfony/polyfill-php73": "*",
+        "symfony/polyfill-php74": "*",
+        "symfony/polyfill-php80": "*",
+        "symfony/polyfill-php81": "*",
+        "symfony/polyfill-php82": "*"
+    },
+    "scripts": {
+        "auto-scripts": {
+            "cache:clear": "symfony-cmd",
+            "assets:install %PUBLIC_DIR%": "symfony-cmd"
+        },
+        "post-install-cmd": [
+            "@auto-scripts"
+        ],
+        "post-update-cmd": [
+            "@auto-scripts"
+        ],
+        "cs:fixer:check": "php vendor/friendsofphp/php-cs-fixer/php-cs-fixer check --config=config/dev/.php-cs-fixer.dist.php",
+        "cs:fixer:fix": "php vendor/friendsofphp/php-cs-fixer/php-cs-fixer fix --config=config/dev/.php-cs-fixer.dist.php",
+        "database:validate:mapping": "php bin/console doctrine:schema:validate --skip-sync",
+        "database:validate:database": "php bin/console doctrine:schema:validate --skip-mapping",
+        "database:validate:all": "php bin/console doctrine:schema:validate",
+        "test:behaviour:run": "vendor/bin/behat --config=behat.yml"
+    },
+    "conflict": {
+        "symfony/symfony": "*"
+    },
+    "extra": {
+        "symfony": {
+            "allow-contrib": false,
+            "require": "7.1.*"
+        }
+    },
+    "require-dev": {
+        "behat/behat": "^3.14",
+        "captainhook/captainhook": "^5.23",
+        "friends-of-behat/mink-browserkit-driver": "^1.6",
+        "friends-of-behat/mink-extension": "^2.7",
+        "friends-of-behat/symfony-extension": "^2.6",
+        "friendsofphp/php-cs-fixer": "^3.61",
+        "phpmd/phpmd": "^2.15",
+        "phpstan/phpstan": "^1.11",
+        "phpunit/phpunit": "^3.7",
+        "symfony/browser-kit": "7.1.*",
+        "symfony/css-selector": "7.1.*",
+        "symfony/maker-bundle": "*",
+        "symfony/phpunit-bridge": "^3.2",
+        "vimeo/psalm": "^5.25"
+    }
+}
