@@ -2,7 +2,6 @@
 
 namespace App\Tests\Behat\Context\Infrastructure\Login;
 
-use App\Infrastructure\Login\Exception\PasswordEncryptionFailedException;
 use App\Infrastructure\Login\PasswordEncoder;
 use Behat\Behat\Context\Context;
 use Behat\Hook\BeforeScenario;
@@ -61,6 +60,7 @@ class PasswordEncoderContext extends TestCase implements Context
         } catch (Throwable $exception) {
             $this->exception = $exception;
         }
+
         return $result;
     }
 }
