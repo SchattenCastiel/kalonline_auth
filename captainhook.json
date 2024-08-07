@@ -12,8 +12,12 @@
         ]
     },
     "pre-push": {
-        "enabled": false,
-        "actions": []
+        "enabled": true,
+        "actions": [
+            {
+                "action": "composer test:behaviour:run"
+            }
+        ]
     },
     "pre-commit": {
         "enabled": true,
