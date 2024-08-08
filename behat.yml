@@ -8,6 +8,10 @@ default:
             paths: [ tests/Behat/Feature/Infrastructure/Login/password_encoder.feature ]
             contexts:
                 - App\Tests\Behat\Context\Infrastructure\Login\PasswordEncoderContext
+        password_decoder:
+            paths: [ tests/Behat/Feature/Infrastructure/Login/password_decoder.feature ]
+            contexts:
+                - App\Tests\Behat\Context\Infrastructure\Login\PasswordDecoderContext
 
     extensions:
         FriendsOfBehat\SymfonyExtension:
