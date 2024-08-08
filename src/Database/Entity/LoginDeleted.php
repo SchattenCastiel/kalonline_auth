@@ -25,7 +25,7 @@ class LoginDeleted
     #[ORM\Column(name: 'DeletedTime', type: Types::DATETIME_MUTABLE->value, nullable: false)]
     private DateTimeInterface $deletedTime;
 
-    public function __construct(?int $uid, int $id, ?DateTimeInterface $deletedTime)
+    public function __construct(int $uid, string $id, DateTimeInterface $deletedTime)
     {
         $this->uid = $uid;
         $this->id = $id;

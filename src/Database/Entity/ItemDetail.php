@@ -33,7 +33,7 @@ class ItemDetail
     #[ORM\Column(name: 'Price', type: Types::INTEGER->value, nullable: false)]
     private int $price;
 
-    public function __construct(int $id, int $billCode, int $itemCode, string $unit, string $unitName, int $price)
+    public function __construct(int $billCode, int $itemCode, string $unit, string $unitName, int $price)
     {
         $this->billCode = $billCode;
         $this->itemCode = $itemCode;

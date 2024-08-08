@@ -2,6 +2,7 @@
 
 namespace App\Infrastructure\Database\Types;
 
+use App\Infrastructure\Database\Types\Exception\ImageTypeClassNotStringException;
 use Doctrine\DBAL\ParameterType;
 use Doctrine\DBAL\Platforms\AbstractPlatform;
 use Doctrine\DBAL\Types\Type;
@@ -29,18 +30,26 @@ class ImageType extends Type
     /**
      * @return false|GdImage|resource|null
      */
-    public function convertToPHPValue($value, AbstractPlatform $platform): false|GdImage|null
+    public function convertToPHPValue($value, AbstractPlatform $platform): mixed
     {
         if (null === $value) {
             return null;
         }
 
+        if (!is_string($value)) {
+            throw new ImageTypeClassNotStringException('string', gettype($value));
+        }
+
         return imagecreatefromstring(base64_decode($value));
     }
 
-    public function convertToDatabaseValue($value, AbstractPlatform $platform): ?int
+    public function convertToDatabaseValue($value, AbstractPlatform $platform): int
     {
-        return hexdec(addslashes($value));
+        if (!is_string($value)) {
+            throw new ImageTypeClassNotStringException('string', gettype($value));
+        }
+
+        return (int)round(hexdec(addslashes($value)));
     }
 
     public function getBindingType(): int

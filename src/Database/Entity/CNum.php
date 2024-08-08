@@ -23,11 +23,6 @@ class CNum
         $this->num = $num;
     }
 
-    public function getId(): int
-    {
-        return $this->id;
-    }
-
     public function getUid(): ?int
     {
         return $this->uid;

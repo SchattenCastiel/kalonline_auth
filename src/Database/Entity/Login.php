@@ -43,7 +43,7 @@ class Login
     #[ORM\Column(name: 'YourCode', type: Types::STRING->value, length: 20, nullable: true)]
     private ?string $yourCode = null;
 
-    public function __construct(int $id, string $pwd)
+    public function __construct(string $id, string $pwd)
     {
         $this->id = $id;
         $this->pwd = $pwd;

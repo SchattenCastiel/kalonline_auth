@@ -30,6 +30,9 @@
             },
             {
                 "action": "composer database:validate:mapping"
+            },
+            {
+                "action": "composer phpstan:run:analyze"
             }
         ]
     },

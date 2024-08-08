@@ -2,6 +2,7 @@
 
 namespace App\Infrastructure\Database\Types;
 
+use App\Infrastructure\Database\Types\Exception\TinyIntTypeClassTypeException;
 use Doctrine\DBAL\ParameterType;
 use Doctrine\DBAL\Platforms\AbstractPlatform;
 use Doctrine\DBAL\Types\Type;
@@ -27,7 +28,15 @@ class TinyintType extends Type
 
     public function convertToPHPValue($value, AbstractPlatform $platform): ?int
     {
-        return null === $value ? null : (int)$value;
+        if (null === $value) {
+            return null;
+        }
+
+        if (!is_numeric($value) && !is_string($value) && !is_bool($value)) {
+            throw new TinyIntTypeClassTypeException('string|numeric|bool', gettype($value));
+        }
+
+        return (int)$value;
     }
 
     /**
@@ -35,7 +44,15 @@ class TinyintType extends Type
      */
     public function convertToDatabaseValue($value, AbstractPlatform $platform): mixed
     {
-        return null === $value ? null : (int)$value;
+        if (null === $value) {
+            return null;
+        }
+
+        if (!is_numeric($value) && !is_string($value) && !is_bool($value)) {
+            throw new TinyIntTypeClassTypeException('string|numeric|bool', gettype($value));
+        }
+
+        return (int)$value;
     }
 
     public function getBindingType(): int

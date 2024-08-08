@@ -28,7 +28,7 @@ class DtProperties
     private ?string $uvalue = null;
 
     #[ORM\Column(name: 'lvalue', type: Types::IMAGE->value, nullable: true)]
-    private $lvalue;
+    private string $lvalue;
 
     #[ORM\Column(name: 'version', type: Types::INTEGER->value, nullable: false)]
     private int $version;
@@ -50,7 +50,7 @@ class DtProperties
         return $this->objectId;
     }
 
-    public function setObjectId(int $objectId): static
+    public function setObjectId(int $objectId): self
     {
         $this->objectId = $objectId;
 
@@ -67,7 +67,7 @@ class DtProperties
         return $this->value;
     }
 
-    public function setValue(string $value): static
+    public function setValue(string $value): self
     {
         $this->value = $value;
 
@@ -79,19 +79,19 @@ class DtProperties
         return $this->uvalue;
     }
 
-    public function setUvalue(string $uvalue): static
+    public function setUvalue(string $uvalue): self
     {
         $this->uvalue = $uvalue;
 
         return $this;
     }
 
-    public function getLvalue()
+    public function getLvalue(): string
     {
         return $this->lvalue;
     }
 
-    public function setLvalue($lvalue): static
+    public function setLvalue(string $lvalue): self
     {
         $this->lvalue = $lvalue;
 

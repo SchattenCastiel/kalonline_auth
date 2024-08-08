@@ -14,7 +14,7 @@ class ItemBuyBackupRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, ItemBuy::class);
+        parent::__construct($registry, ItemBuyBackup::class);
     }
 
     //    /**

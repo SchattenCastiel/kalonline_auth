@@ -11,7 +11,6 @@ use Doctrine\ORM\Mapping as ORM;
 class CLogin
 {
     #[ORM\Id]
-    #[ORM\GeneratedValue]
     #[ORM\Column(name: 'CID', type: Types::INTEGER->value, nullable: false)]
     private int $cid;
 
@@ -21,8 +20,9 @@ class CLogin
     #[ORM\Column(name: 'ExpTime', type: Types::INTEGER->value, nullable: false, options: ['default' => 0])]
     private int $expTime;
 
-    public function __construct(int $type, int $expTime)
+    public function __construct(int $cid, int $type, int $expTime)
     {
+        $this->cid = $cid;
         $this->type = $type;
         $this->expTime = $expTime;
     }

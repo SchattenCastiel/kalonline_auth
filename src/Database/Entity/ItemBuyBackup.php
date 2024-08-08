@@ -89,12 +89,12 @@ class ItemBuyBackup
         string $unit,
         int $discount,
         DateTimeInterface $buyDate,
-        string $place,
+        bool $place,
         string $charDate,
         int $flag,
         string $zipCode,
-        string $gender,
-        string $bSuccess,
+        bool $gender,
+        bool $bSuccess,
         int $age,
         int $price
     ) {
@@ -200,7 +200,7 @@ class ItemBuyBackup
         return $this->buyDate;
     }
 
-    public function getPlace(): ?string
+    public function getPlace(): ?bool
     {
         return $this->place;
     }
@@ -220,12 +220,12 @@ class ItemBuyBackup
         return $this->zipCode;
     }
 
-    public function getGender(): ?string
+    public function getGender(): ?bool
     {
         return $this->gender;
     }
 
-    public function getBSuccess(): ?string
+    public function getBSuccess(): ?bool
     {
         return $this->bSuccess;
     }
