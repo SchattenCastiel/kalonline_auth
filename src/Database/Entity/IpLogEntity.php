@@ -18,7 +18,7 @@ class IpLogEntity
     #[ORM\Column(name: 'UID', type: Types::STRING->value, length: 20, nullable: false)]
     private string $uid;
 
-    #[ORM\Column(name: 'IPEntity', type: Types::STRING->value, length: 20, nullable: false)]
+    #[ORM\Column(name: 'IP', type: Types::STRING->value, length: 20, nullable: false)]
     private string $ip;
 
     public function __construct(string $uid, string $ip)

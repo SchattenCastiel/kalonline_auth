@@ -8,7 +8,7 @@ use DateTimeInterface;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: ItemBuyRepository::class)]
-#[ORM\Table(name: 'ItemBuyEntity')]
+#[ORM\Table(name: 'ItemBuy')]
 class ItemBuyEntity
 {
     #[ORM\Column(name: 'Num', type: Types::INTEGER->value, nullable: false)]

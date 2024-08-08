@@ -9,7 +9,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: ItemBuyBackupRepository::class)]
 #[ORM\Table(name: 'ItemBuy_backup')]
-class ItemBuyBackup
+class ItemBuyBackupEntity
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]

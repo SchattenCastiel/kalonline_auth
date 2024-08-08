@@ -2,19 +2,19 @@
 
 namespace App\Database\Repository;
 
-use App\Database\Entity\ItemBuyBackup;
+use App\Database\Entity\ItemBuyBackupEntity;
 use App\Database\Entity\ItemBuyEntity;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * @extends ServiceEntityRepository<ItemBuyBackup>
+ * @extends ServiceEntityRepository<ItemBuyBackupEntity>
  */
 class ItemBuyBackupRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, ItemBuyBackup::class);
+        parent::__construct($registry, ItemBuyBackupEntity::class);
     }
 
     //    /**
