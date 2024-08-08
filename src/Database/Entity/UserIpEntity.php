@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: UserIpRepository::class)]
 #[ORM\Table(name: 'user_ip')]
-class UserIp
+class UserIpEntity
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]

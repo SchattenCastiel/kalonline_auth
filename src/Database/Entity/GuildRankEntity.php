@@ -7,8 +7,8 @@ use App\Infrastructure\Database\Types;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: GuildRankRepository::class)]
-#[ORM\Table(name: 'GuildRank')]
-class GuildRank
+#[ORM\Table(name: 'GuildRankEntity')]
+class GuildRankEntity
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]

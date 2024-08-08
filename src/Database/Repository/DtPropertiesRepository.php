@@ -2,22 +2,22 @@
 
 namespace App\Database\Repository;
 
-use App\Database\Entity\DtProperties;
+use App\Database\Entity\DtPropertiesEntity;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * @extends ServiceEntityRepository<DtProperties>
+ * @extends ServiceEntityRepository<DtPropertiesEntity>
  */
 class DtPropertiesRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, DtProperties::class);
+        parent::__construct($registry, DtPropertiesEntity::class);
     }
 
     //    /**
-    //     * @return DtProperties[] Returns an array of DtProperties objects
+    //     * @return DtPropertiesEntity[] Returns an array of DtPropertiesEntity objects
     //     */
     //    public function findByExampleField($value): array
     //    {
@@ -31,7 +31,7 @@ class DtPropertiesRepository extends ServiceEntityRepository
     //        ;
     //    }
 
-    //    public function findOneBySomeField($value): ?DtProperties
+    //    public function findOneBySomeField($value): ?DtPropertiesEntity
     //    {
     //        return $this->createQueryBuilder('d')
     //            ->andWhere('d.exampleField = :val')

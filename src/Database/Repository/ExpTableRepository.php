@@ -2,22 +2,22 @@
 
 namespace App\Database\Repository;
 
-use App\Database\Entity\ExpTable;
+use App\Database\Entity\ExpTableEntity;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * @extends ServiceEntityRepository<ExpTable>
+ * @extends ServiceEntityRepository<ExpTableEntity>
  */
 class ExpTableRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, ExpTable::class);
+        parent::__construct($registry, ExpTableEntity::class);
     }
 
     //    /**
-    //     * @return ExpTable[] Returns an array of ExpTable objects
+    //     * @return ExpTableEntity[] Returns an array of ExpTableEntity objects
     //     */
     //    public function findByExampleField($value): array
     //    {
@@ -31,7 +31,7 @@ class ExpTableRepository extends ServiceEntityRepository
     //        ;
     //    }
 
-    //    public function findOneBySomeField($value): ?ExpTable
+    //    public function findOneBySomeField($value): ?ExpTableEntity
     //    {
     //        return $this->createQueryBuilder('e')
     //            ->andWhere('e.exampleField = :val')

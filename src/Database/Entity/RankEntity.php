@@ -7,8 +7,8 @@ use App\Infrastructure\Database\Types;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: RankRepository::class)]
-#[ORM\Table(name: 'Rank')]
-class Rank
+#[ORM\Table(name: 'RankEntity')]
+class RankEntity
 {
     #[ORM\Id]
     #[ORM\Column(name: 'Server', type: Types::TINYINT->value, nullable: false)]

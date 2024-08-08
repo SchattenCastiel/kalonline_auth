@@ -2,22 +2,22 @@
 
 namespace App\Database\Repository;
 
-use App\Database\Entity\ItemBuy;
+use App\Database\Entity\ItemBuyEntity;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * @extends ServiceEntityRepository<ItemBuy>
+ * @extends ServiceEntityRepository<ItemBuyEntity>
  */
 class ItemBuyRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, ItemBuy::class);
+        parent::__construct($registry, ItemBuyEntity::class);
     }
 
     //    /**
-    //     * @return ItemBuy[] Returns an array of ItemBuy objects
+    //     * @return ItemBuyEntity[] Returns an array of ItemBuyEntity objects
     //     */
     //    public function findByExampleField($value): array
     //    {
@@ -31,7 +31,7 @@ class ItemBuyRepository extends ServiceEntityRepository
     //        ;
     //    }
 
-    //    public function findOneBySomeField($value): ?ItemBuy
+    //    public function findOneBySomeField($value): ?ItemBuyEntity
     //    {
     //        return $this->createQueryBuilder('i')
     //            ->andWhere('i.exampleField = :val')

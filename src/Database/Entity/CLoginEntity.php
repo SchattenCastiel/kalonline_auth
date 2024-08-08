@@ -7,8 +7,8 @@ use App\Infrastructure\Database\Types;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: CLoginRepository::class)]
-#[ORM\Table(name: 'CLogin')]
-class CLogin
+#[ORM\Table(name: 'CLoginEntity')]
+class CLoginEntity
 {
     #[ORM\Id]
     #[ORM\Column(name: 'CID', type: Types::INTEGER->value, nullable: false)]

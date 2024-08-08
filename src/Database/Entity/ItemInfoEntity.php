@@ -7,8 +7,8 @@ use App\Infrastructure\Database\Types;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: ItemInfoRepository::class)]
-#[ORM\Table(name: 'ItemInfo')]
-class ItemInfo
+#[ORM\Table(name: 'ItemInfoEntity')]
+class ItemInfoEntity
 {
     #[ORM\Id]
     #[ORM\Column(name: 'ItemCode', type: Types::SMALLINT->value, nullable: false)]

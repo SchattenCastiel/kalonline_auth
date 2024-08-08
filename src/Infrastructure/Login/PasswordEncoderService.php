@@ -4,7 +4,7 @@ namespace App\Infrastructure\Login;
 
 use App\Infrastructure\Login\Exception\PasswordEncryptionFailedException;
 
-class PasswordEncoder
+class PasswordEncoderService
 {
     /**
      * @throws PasswordEncryptionFailedException

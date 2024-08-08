@@ -8,8 +8,8 @@ use DateTimeInterface;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: LogRepository::class)]
-#[ORM\Table(name: 'Log')]
-class Log
+#[ORM\Table(name: 'LogEntity')]
+class LogEntity
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]

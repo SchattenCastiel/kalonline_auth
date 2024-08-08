@@ -7,8 +7,8 @@ use App\Infrastructure\Database\Types;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: ExpTableRepository::class)]
-#[ORM\Table(name: 'ExpTable')]
-class ExpTable
+#[ORM\Table(name: 'ExpTableEntity')]
+class ExpTableEntity
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]

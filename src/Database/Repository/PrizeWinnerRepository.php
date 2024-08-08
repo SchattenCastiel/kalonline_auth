@@ -2,22 +2,22 @@
 
 namespace App\Database\Repository;
 
-use App\Database\Entity\PrizeWinner;
+use App\Database\Entity\PrizeWinnerEntity;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * @extends ServiceEntityRepository<PrizeWinner>
+ * @extends ServiceEntityRepository<PrizeWinnerEntity>
  */
 class PrizeWinnerRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, PrizeWinner::class);
+        parent::__construct($registry, PrizeWinnerEntity::class);
     }
 
     //    /**
-    //     * @return PrizeWinner[] Returns an array of PrizeWinner objects
+    //     * @return PrizeWinnerEntity[] Returns an array of PrizeWinnerEntity objects
     //     */
     //    public function findByExampleField($value): array
     //    {
@@ -31,7 +31,7 @@ class PrizeWinnerRepository extends ServiceEntityRepository
     //        ;
     //    }
 
-    //    public function findOneBySomeField($value): ?PrizeWinner
+    //    public function findOneBySomeField($value): ?PrizeWinnerEntity
     //    {
     //        return $this->createQueryBuilder('p')
     //            ->andWhere('p.exampleField = :val')

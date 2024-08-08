@@ -2,22 +2,22 @@
 
 namespace App\Database\Repository;
 
-use App\Database\Entity\Rank;
+use App\Database\Entity\RankEntity;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * @extends ServiceEntityRepository<Rank>
+ * @extends ServiceEntityRepository<RankEntity>
  */
 class RankRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, Rank::class);
+        parent::__construct($registry, RankEntity::class);
     }
 
     //    /**
-    //     * @return Rank[] Returns an array of Rank objects
+    //     * @return RankEntity[] Returns an array of RankEntity objects
     //     */
     //    public function findByExampleField($value): array
     //    {
@@ -31,7 +31,7 @@ class RankRepository extends ServiceEntityRepository
     //        ;
     //    }
 
-    //    public function findOneBySomeField($value): ?Rank
+    //    public function findOneBySomeField($value): ?RankEntity
     //    {
     //        return $this->createQueryBuilder('r')
     //            ->andWhere('r.exampleField = :val')

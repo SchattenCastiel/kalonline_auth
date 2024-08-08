@@ -7,8 +7,8 @@ use App\Infrastructure\Database\Types;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: IPRepository::class)]
-#[ORM\Table(name: 'IP')]
-class IP
+#[ORM\Table(name: 'IPEntity')]
+class IPEntity
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]

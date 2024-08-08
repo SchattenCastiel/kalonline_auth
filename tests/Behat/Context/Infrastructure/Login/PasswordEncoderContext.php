@@ -2,7 +2,7 @@
 
 namespace App\Tests\Behat\Context\Infrastructure\Login;
 
-use App\Infrastructure\Login\PasswordEncoder;
+use App\Infrastructure\Login\PasswordEncoderService;
 use Behat\Behat\Context\Context;
 use Behat\Hook\BeforeScenario;
 use Behat\Step\Then;
@@ -16,7 +16,7 @@ class PasswordEncoderContext extends TestCase implements Context
 
     private ?Throwable $exception = null;
 
-    private PasswordEncoder $passwordEncoder;
+    private PasswordEncoderService $passwordEncoder;
 
     public function __construct()
     {
@@ -26,7 +26,7 @@ class PasswordEncoderContext extends TestCase implements Context
     #[BeforeScenario]
     public function setUp(): void
     {
-        $this->passwordEncoder = new PasswordEncoder();
+        $this->passwordEncoder = new PasswordEncoderService();
     }
 
     #[When('the user is typing in the password :password')]

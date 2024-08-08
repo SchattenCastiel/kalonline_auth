@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: DtPropertiesRepository::class)]
 #[ORM\Table(name: 'dtproperties')]
-class DtProperties
+class DtPropertiesEntity
 {
     #[ORM\Id]
     #[ORM\Column(name: 'id', type: 'integer', nullable: false)]

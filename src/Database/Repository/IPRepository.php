@@ -2,22 +2,22 @@
 
 namespace App\Database\Repository;
 
-use App\Database\Entity\IP;
+use App\Database\Entity\IPEntity;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * @extends ServiceEntityRepository<IP>
+ * @extends ServiceEntityRepository<IPEntity>
  */
 class IPRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, IP::class);
+        parent::__construct($registry, IPEntity::class);
     }
 
     //    /**
-    //     * @return IP[] Returns an array of IP objects
+    //     * @return IPEntity[] Returns an array of IPEntity objects
     //     */
     //    public function findByExampleField($value): array
     //    {
@@ -31,7 +31,7 @@ class IPRepository extends ServiceEntityRepository
     //        ;
     //    }
 
-    //    public function findOneBySomeField($value): ?IP
+    //    public function findOneBySomeField($value): ?IPEntity
     //    {
     //        return $this->createQueryBuilder('i')
     //            ->andWhere('i.exampleField = :val')

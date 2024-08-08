@@ -2,22 +2,22 @@
 
 namespace App\Database\Repository;
 
-use App\Database\Entity\ItemDetail;
+use App\Database\Entity\ItemDetailEntity;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * @extends ServiceEntityRepository<ItemDetail>
+ * @extends ServiceEntityRepository<ItemDetailEntity>
  */
 class ItemDetailRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, ItemDetail::class);
+        parent::__construct($registry, ItemDetailEntity::class);
     }
 
     //    /**
-    //     * @return ItemDetail[] Returns an array of ItemDetail objects
+    //     * @return ItemDetailEntity[] Returns an array of ItemDetailEntity objects
     //     */
     //    public function findByExampleField($value): array
     //    {
@@ -31,7 +31,7 @@ class ItemDetailRepository extends ServiceEntityRepository
     //        ;
     //    }
 
-    //    public function findOneBySomeField($value): ?ItemDetail
+    //    public function findOneBySomeField($value): ?ItemDetailEntity
     //    {
     //        return $this->createQueryBuilder('i')
     //            ->andWhere('i.exampleField = :val')

@@ -2,22 +2,22 @@
 
 namespace App\Database\Repository;
 
-use App\Database\Entity\IpLog;
+use App\Database\Entity\IpLogEntity;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * @extends ServiceEntityRepository<IpLog>
+ * @extends ServiceEntityRepository<IpLogEntity>
  */
 class IpLogRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, IpLog::class);
+        parent::__construct($registry, IpLogEntity::class);
     }
 
     //    /**
-    //     * @return IpLog[] Returns an array of IpLog objects
+    //     * @return IpLogEntity[] Returns an array of IpLogEntity objects
     //     */
     //    public function findByExampleField($value): array
     //    {
@@ -31,7 +31,7 @@ class IpLogRepository extends ServiceEntityRepository
     //        ;
     //    }
 
-    //    public function findOneBySomeField($value): ?IpLog
+    //    public function findOneBySomeField($value): ?IpLogEntity
     //    {
     //        return $this->createQueryBuilder('i')
     //            ->andWhere('i.exampleField = :val')

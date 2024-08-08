@@ -2,22 +2,22 @@
 
 namespace App\Database\Repository;
 
-use App\Database\Entity\ItemInfo;
+use App\Database\Entity\ItemInfoEntity;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * @extends ServiceEntityRepository<ItemInfo>
+ * @extends ServiceEntityRepository<ItemInfoEntity>
  */
 class ItemInfoRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, ItemInfo::class);
+        parent::__construct($registry, ItemInfoEntity::class);
     }
 
     //    /**
-    //     * @return ItemInfo[] Returns an array of ItemInfo objects
+    //     * @return ItemInfoEntity[] Returns an array of ItemInfoEntity objects
     //     */
     //    public function findByExampleField($value): array
     //    {
@@ -31,7 +31,7 @@ class ItemInfoRepository extends ServiceEntityRepository
     //        ;
     //    }
 
-    //    public function findOneBySomeField($value): ?ItemInfo
+    //    public function findOneBySomeField($value): ?ItemInfoEntity
     //    {
     //        return $this->createQueryBuilder('i')
     //            ->andWhere('i.exampleField = :val')

@@ -2,22 +2,22 @@
 
 namespace App\Database\Repository;
 
-use App\Database\Entity\LoginDeleted;
+use App\Database\Entity\LoginDeletedEntity;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * @extends ServiceEntityRepository<LoginDeleted>
+ * @extends ServiceEntityRepository<LoginDeletedEntity>
  */
 class LoginDeletedRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, LoginDeleted::class);
+        parent::__construct($registry, LoginDeletedEntity::class);
     }
 
     //    /**
-    //     * @return LoginDeleted[] Returns an array of LoginDeleted objects
+    //     * @return LoginDeletedEntity[] Returns an array of LoginDeletedEntity objects
     //     */
     //    public function findByExampleField($value): array
     //    {
@@ -31,7 +31,7 @@ class LoginDeletedRepository extends ServiceEntityRepository
     //        ;
     //    }
 
-    //    public function findOneBySomeField($value): ?LoginDeleted
+    //    public function findOneBySomeField($value): ?LoginDeletedEntity
     //    {
     //        return $this->createQueryBuilder('l')
     //            ->andWhere('l.exampleField = :val')

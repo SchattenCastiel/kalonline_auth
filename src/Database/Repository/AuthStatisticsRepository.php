@@ -2,22 +2,22 @@
 
 namespace App\Database\Repository;
 
-use App\Database\Entity\AuthStatistics;
+use App\Database\Entity\AuthStatisticsEntity;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * @extends ServiceEntityRepository<AuthStatistics>
+ * @extends ServiceEntityRepository<AuthStatisticsEntity>
  */
 class AuthStatisticsRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, AuthStatistics::class);
+        parent::__construct($registry, AuthStatisticsEntity::class);
     }
 
     //    /**
-    //     * @return AuthStatistics[] Returns an array of AuthStatistics objects
+    //     * @return AuthStatisticsEntity[] Returns an array of AuthStatisticsEntity objects
     //     */
     //    public function findByExampleField($value): array
     //    {
@@ -31,7 +31,7 @@ class AuthStatisticsRepository extends ServiceEntityRepository
     //        ;
     //    }
 
-    //    public function findOneBySomeField($value): ?AuthStatistics
+    //    public function findOneBySomeField($value): ?AuthStatisticsEntity
     //    {
     //        return $this->createQueryBuilder('a')
     //            ->andWhere('a.exampleField = :val')

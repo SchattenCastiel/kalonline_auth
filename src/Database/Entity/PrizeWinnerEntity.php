@@ -7,8 +7,8 @@ use App\Infrastructure\Database\Types;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: PrizeWinnerRepository::class)]
-#[ORM\Table(name: 'PrizeWinner')]
-class PrizeWinner
+#[ORM\Table(name: 'PrizeWinnerEntity')]
+class PrizeWinnerEntity
 {
     #[ORM\Id]
     #[ORM\Column(name: 'UID', type: Types::INTEGER->value, nullable: false)]

@@ -2,22 +2,22 @@
 
 namespace App\Database\Repository;
 
-use App\Database\Entity\CLogin;
+use App\Database\Entity\CLoginEntity;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * @extends ServiceEntityRepository<CLogin>
+ * @extends ServiceEntityRepository<CLoginEntity>
  */
 class CLoginRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, CLogin::class);
+        parent::__construct($registry, CLoginEntity::class);
     }
 
     //    /**
-    //     * @return CLogin[] Returns an array of CLogin objects
+    //     * @return CLoginEntity[] Returns an array of CLoginEntity objects
     //     */
     //    public function findByExampleField($value): array
     //    {
@@ -31,7 +31,7 @@ class CLoginRepository extends ServiceEntityRepository
     //        ;
     //    }
 
-    //    public function findOneBySomeField($value): ?CLogin
+    //    public function findOneBySomeField($value): ?CLoginEntity
     //    {
     //        return $this->createQueryBuilder('c')
     //            ->andWhere('c.exampleField = :val')

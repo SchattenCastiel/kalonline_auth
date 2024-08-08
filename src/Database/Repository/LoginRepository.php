@@ -2,22 +2,22 @@
 
 namespace App\Database\Repository;
 
-use App\Database\Entity\Login;
+use App\Database\Entity\LoginEntity;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * @extends ServiceEntityRepository<Login>
+ * @extends ServiceEntityRepository<LoginEntity>
  */
 class LoginRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, Login::class);
+        parent::__construct($registry, LoginEntity::class);
     }
 
     //    /**
-    //     * @return Login[] Returns an array of Login objects
+    //     * @return LoginEntity[] Returns an array of LoginEntity objects
     //     */
     //    public function findByExampleField($value): array
     //    {
@@ -31,7 +31,7 @@ class LoginRepository extends ServiceEntityRepository
     //        ;
     //    }
 
-    //    public function findOneBySomeField($value): ?Login
+    //    public function findOneBySomeField($value): ?LoginEntity
     //    {
     //        return $this->createQueryBuilder('l')
     //            ->andWhere('l.exampleField = :val')

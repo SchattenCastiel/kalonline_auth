@@ -1,0 +1,43 @@
+deptrac:
+    paths:
+        - ./../../src
+    exclude_files:
+        - .*test.*
+    layers:
+        - name: Controller
+          collectors:
+              - type: directory
+                value: src/Controller
+        - name: Repository
+          collectors:
+              - type: directory
+                value: src/database/Repository
+        - name: Service
+          collectors:
+              - type: bool
+                must:
+                  - type: classLike
+                    value: .*Service.*
+                  - type: directory
+                    value: src/Logic
+        - name: UseCase
+          collectors:
+            - type: bool
+              must:
+                - type: classLike
+                  value: .*UseCase.*
+                - type: directory
+                  value: src/Logic
+        - name: Entity
+          collectors:
+              - type: directory
+                value: src/Database/Entity
+    ruleset:
+        Controller:
+            - UseCase
+        Service:
+            - Repository
+        Repository:
+            - Entity
+        Entity:
+            - Repository

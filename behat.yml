@@ -5,7 +5,7 @@ default:
             contexts:
                 - App\Tests\Behat\Context\Swagger\SwaggerContext
         PasswordEncoder:
-            paths: [ tests/Behat/Feature/Infrastructure/Login/password_encoder.feature ]
+            paths: [ tests/Behat/Feature/Infrastructure/LoginEntity/password_encoder.feature ]
             contexts:
                 - App\Tests\Behat\Context\Infrastructure\Login\PasswordEncoderContext
 
