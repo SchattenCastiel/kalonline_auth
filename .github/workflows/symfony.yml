@@ -44,6 +44,12 @@ jobs:
     - name: Create standard .env file for test
       run: |
         cp .env.test.dist .env.test
+    - name: Execute some code standard testings
+      run: |
+        composer cs:fixer:check
+        composer database:validate:mapping
+        composer phpstan:run:analyze
+        composer deptrac:run:analyze
     - name: Execute tests (Unit and Feature tests) via Behat
       env:
         DATABASE_URL: sqlite:///%kernel.project_dir%/data/database.sqlite
