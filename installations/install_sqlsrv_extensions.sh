@@ -6,7 +6,7 @@ if [ -z "${phpVersion}" ]; then
   exit 1
 fi
 
-apt install php-pear -y
+apt install php-pear php${phpVersion}-dev -y
 
 pecl install sqlsrv
 pecl install pdo_sqlsrv
